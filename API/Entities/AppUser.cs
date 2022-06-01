@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
-public class AppUser
+namespace API.Entities
 {
-    public int Id { get; set; }
-    public string UserName { get; set; }
-
-    StringBuilder sb = new StringBuilder();
-
+    public class AppUser
+    {
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
+    }
 }
